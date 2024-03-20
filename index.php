@@ -1,3 +1,10 @@
+<table border="1">
+	<tr>
+		<th>Id</th>
+		<th>First name</th>
+		<th>Last name</th>
+		<th>Delete</th>
+	</tr>
 <?php
 	function prepair_db($link)
 	{
@@ -19,4 +26,16 @@
 	{
 		prepair_db($link);
 	}
+	
+	$result=mysqli_query($link,"select * from users");
+	while($row=mysqli_fetch_array($result))
+	{
+		echo "<tr>";
+		echo "<td>".$row['id']."</td>";
+		echo "<td>".$row['firstname']."</td>";
+		echo "<td>".$row['lastname']."</td>";
+		echo '<td><a href="delete.php?id='.$row['id'].'">Delete</a></td>';
+		echo "</tr>";
+	}
 ?>
+</table>
