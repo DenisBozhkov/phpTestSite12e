@@ -1,5 +1,5 @@
 <?php
-	$id=isset($_GET['id'])??-1;
+	$id=$_GET['id']??-1;
 	try
 	{
 		$link=mysqli_connect("localhost","root","","testPHPSite");

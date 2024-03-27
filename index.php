@@ -1,8 +1,10 @@
+<a href="create.html">Create user</a>
 <table border="1">
 	<tr>
 		<th>Id</th>
 		<th>First name</th>
 		<th>Last name</th>
+		<th>Update</th>
 		<th>Delete</th>
 	</tr>
 <?php
@@ -34,6 +36,7 @@
 		echo "<td>".$row['id']."</td>";
 		echo "<td>".$row['firstname']."</td>";
 		echo "<td>".$row['lastname']."</td>";
+		echo '<td><a href="update.php?id='.$row['id'].'">Update</a></td>';
 		echo '<td><a href="delete.php?id='.$row['id'].'">Delete</a></td>';
 		echo "</tr>";
 	}
