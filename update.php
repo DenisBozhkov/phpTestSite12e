@@ -1,4 +1,7 @@
 <?php
+	session_start();
+	if(!isset($_SESSION['user']))
+		Header("Location:login.html");
 	try
 	{
 		$link=mysqli_connect("localhost","root","","testPHPSite");

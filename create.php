@@ -1,4 +1,7 @@
 <?php
+	session_start();
+	if(!isset($_SESSION['user']))
+		Header("Location:login.html");
 	$firstname=$_POST['firstname'];
 	$lastname=$_POST['lastname'];
 	try

@@ -1,4 +1,7 @@
 <?php
+	session_start();
+	if(!isset($_SESSION['user']))
+		Header("Location:login.html");
 	$id=$_GET['id']??-1;
 	try
 	{
