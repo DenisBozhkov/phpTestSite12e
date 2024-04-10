@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if(!isset($_SESSION['user']))
+	if(!isset($_SESSION['id']))
 		Header("Location:login.html");
 	$id=$_GET['id']??-1;
 	try
